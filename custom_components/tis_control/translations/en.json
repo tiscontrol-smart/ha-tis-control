@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to your TIS gateway",
+        "description": "Enter the IP address of the TIS IP gateway (IP-COM-PORT / GTY) on this network. Home Assistant will look for TIS modules on the bus.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        },
+        "data_description": {
+          "host": "The gateway's IP address, for example 192.168.1.50.",
+          "port": "Leave at 6000 unless your installer changed it."
+        }
+      },
+      "source": {
+        "title": "Choose your devices",
+        "description": "{count} TIS modules answered on the bus.",
+        "menu_options": {
+          "discovered": "Add the modules that were found",
+          "studio": "Import the device list from TIS Studio (names, rooms and scenes)"
+        }
+      },
+      "studio": {
+        "title": "Import from TIS Studio",
+        "description": "In TIS Studio open your project, go to Configuration → Home Assistant and download devices.json. Open that file, copy everything in it and paste it here.",
+        "data": {
+          "studio_json": "Device list"
+        }
+      },
+      "reconfigure": {
+        "title": "Change the TIS gateway",
+        "description": "Enter the new IP address of a TIS IP gateway on this network. Your devices and their names stay as they are.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        },
+        "data_description": {
+          "host": "The gateway's IP address, for example 192.168.1.50.",
+          "port": "Leave at 6000 unless your installer changed it."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "no_devices": "No TIS modules answered. Check the gateway IP and that this device is on the same network as the gateway.",
+      "invalid_studio_json": "That is not a TIS Studio device list. Paste the whole devices.json from Configuration → Home Assistant.",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "nothing_controllable": "Modules were found, but none with outputs Home Assistant can control yet. Import the device list from TIS Studio instead.",
+      "reconfigure_successful": "Re-configuration was successful"
+    }
+  }
+}
