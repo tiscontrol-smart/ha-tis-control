@@ -16,7 +16,7 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
-          # The TIS icon is being submitted to home-assistant/brands.
+          # Brand images ship inside the integration (custom_components/tis_control/brand, HA 2026.3+).
           ignore: brands
   tests:
     runs-on: ubuntu-latest

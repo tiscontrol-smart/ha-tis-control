@@ -9,7 +9,7 @@ devices, and changes made anywhere (wall switches, panels, the TIS app) appear i
 
 - A TIS installation with at least one **TIS IP gateway** (IP-COM-PORT, GTY, or an RCU with IP) on the
   same network as Home Assistant.
-- Home Assistant 2025.6 or newer. Home Assistant needs to receive UDP broadcasts on port **6000** from the
+- Home Assistant 2026.3 or newer. Home Assistant needs to receive UDP broadcasts on port **6000** from the
   gateway — on Home Assistant OS and a Docker container with host networking this works out of the box.
 
 ## Install
